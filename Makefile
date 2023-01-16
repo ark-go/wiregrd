@@ -26,7 +26,7 @@ buildandroid:
 	$(info +Компиляция Android)
 	ANDROID_SDK_ROOT=/home/arkadii/Android/Sdk/ go run gioui.org/cmd/gogio -ldflags "-s -w -X 'main.versionProg=$$($(version))'" -o ./bin/main/$(PROJECTNAME).apk -target android -icon appicon.png -arch arm64 -appid Go.arkiv cmd/main/main.go
 
-run: buildlinux buildwin 
+run: buildlinux 
 	$(info +Запуск)
 	./bin/main/$(PROJECTNAME)
 
